@@ -10,5 +10,5 @@ google_fonts: 'Russo+One|Noto+Sans'
 font:         '"Noto Sans", Helvetica, Arial, sans-serif'
 font_heading: '"Russo One", Helvetica, Arial, sans-serif'
 
-accent_image: ''
+accent_image: 'xxx.png'
 accent_color: '#d84930'
