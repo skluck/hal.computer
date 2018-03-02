@@ -1,2 +1,6 @@
-url:          http://hal.computer
-remote_theme: qwtel/hydejack
+url:          'http://hal.computer'
+remote_theme: 'qwtel/hydejack'
+
+title:        'Hal Deployment Platform'
+description:  > 
+    Hal is a web-based deployment platform built with PHP. It supports both on-premises (behind your firewall) and AWS applications.
