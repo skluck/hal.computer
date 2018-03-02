@@ -2,6 +2,7 @@ url:          'http://hal.computer'
 remote_theme: 'qwtel/hydejack'
 
 title:        'Hal Deployment Platform'
+logo:         '/favicon.ico'
 description:  >
     Hal is a web-based deployment platform built with PHP.
 
