@@ -4,3 +4,9 @@ remote_theme: 'qwtel/hydejack'
 title:        'Hal Deployment Platform'
 description:  > 
     Hal is a web-based deployment platform built with PHP. It supports both on-premises (behind your firewall) and AWS applications.
+
+google_fonts:          'Russo One'
+font:                  'Russo One', sans-serif;
+
+accent_image:          ''
+accent_color:          '#d84930'
