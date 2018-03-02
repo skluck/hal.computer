@@ -1,3 +1,24 @@
+
+/* page styles */
+body {
+    background-color: #524f4f;
+    margin: 2em;
+}
+
+h1, h2 {
+    color: #d84930;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: .05em;
+    margin: .25em auto;
+    text-align: center;
+    width: 70%;
+}
+
+h2 {
+    color: #221919;
+    margin-bottom: 2em;
+}
+
 /* logo styles */
 :root {
     --hal-logo-size: 200px;
