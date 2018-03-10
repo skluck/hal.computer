@@ -6,6 +6,9 @@ logo:         '/favicon.ico'
 description:  >
     Hal is a web-based deployment platform built with PHP.
 
+author:
+    github: 'hal-platform'
+
 google_fonts: 'Russo+One|Noto+Sans'
 font:         '"Noto Sans", Helvetica, Arial, sans-serif'
 font_heading: '"Russo One", Helvetica, Arial, sans-serif'
