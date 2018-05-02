@@ -1,4 +1,4 @@
-url:          'http://hal.computer'
+url:          'https://hal.computer'
 remote_theme: 'qwtel/hydejack'
 
 title:        'Hal Deployment Platform'
