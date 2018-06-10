@@ -1,0 +1,38 @@
+{{ partial "header.html" . }}
+
+{{ partial "example/intro.html" . }}
+
+<div class="wrapper style2">
+
+    {{ with .Title }}
+        <div class="title">{{ . }}</div>
+    {{ end }}
+
+    <div id="main" class="container">
+
+        {{ if isset .Params "sidebar" }}
+            <div class="row 150%">
+                <div class="4u 12u(mobile)">
+                    {{ partial "sidebar.html" . }}
+                </div>
+                <div class="8u 12u(mobile) important(mobile)">
+        {{ end }}
+
+        <!-- Content -->
+        {{ if isset .Params "alt" }}
+            {{ partial "example/main_alt.html" . }}
+        {{ else }}
+            {{ partial "example/main.html" . }}
+        {{ end }}
+
+        {{ if isset .Params "sidebar" }}
+                </div>
+            </div>
+        {{ end }}
+
+    </div>
+</div>
+
+{{ partial "example/highlights.html" . }}
+
+{{ partial "footer.html" . }}

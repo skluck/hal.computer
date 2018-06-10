@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+
+<div class="wrapper style2">
+    {{ with .Title }}
+        <div class="title">{{ . }}</div>
+    {{ end }}
+    {{ with .Content }}
+        <div id="main" class="container">{{ . }}</div>
+    {{ end }}
+</div>
+
+{{ partial "footer.html" . }}

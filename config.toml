@@ -1,0 +1,10 @@
+baseURL = "https://hal.computer"
+title   = "Hal Deployment Platform"
+
+footnoteReturnLinkContents = "↩"
+
+[params]
+
+AuthorName = "Jon Doe"
+GitHubUser = "hal-platform"
+Subtitle   = "Hugo is Absurdly Fast!"
