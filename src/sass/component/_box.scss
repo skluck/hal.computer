@@ -1,0 +1,57 @@
+@include breakpoint(mobile) {
+    .box {
+        &.post-excerpt {
+            .image {
+                &.left {
+                    position: relative;
+                    top: 0.25em;
+                    width: 25%;
+                    margin: 0;
+                }
+            }
+
+            h3, p {
+                margin-left: 32.5%;
+            }
+        }
+    }
+}
+
+@include breakpoint(desktop) {
+    .box {
+        header {
+            margin: 0 0 1.5em 0;
+
+            &.style1 {
+                position: relative;
+                margin: -0.5em 0 0 0;
+                padding-top: 0;
+            }
+        }
+
+        h2 {
+            margin: 0 0 0.75em 0;
+            font-size: 1.15em;
+            letter-spacing: 0.05em;
+        }
+
+        h3 {
+            margin: 0 0 0.5em 0;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        &.post-excerpt {
+            .image.left {
+                position: relative;
+                top: 0.5em;
+                width: 5em;
+            }
+
+            h3, p {
+                margin-left: 7em;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+#logo {
+    text-align: center;
+    margin: auto;
+
+    h1 {
+        font-weight: 900;
+        text-transform: uppercase;
+        color: _palette(highlight);
+    }
+
+    h2 {
+        color: #221919;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        max-width: 40em;
+        margin: 1.25em auto;
+    }
+}
+
+@include breakpoint(mobile) {
+    #logo {
+        h1 {
+            font-size: 1.5em;
+            letter-spacing: 0.2em;
+        }
+    }
+}
+
+@include breakpoint(tablet) {
+    #logo {
+        h1 {
+            font-size: 1.75em;
+        }
+    }
+}
+
+@include breakpoint(desktop) {
+    #logo {
+        h1 {
+            font-size: 2em;
+            letter-spacing: 0.2em;
+        }
+    }
+}

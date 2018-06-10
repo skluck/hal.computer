@@ -1,0 +1,97 @@
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+button,
+.button {
+    @include vendor('transition', 'all .25s ease-in-out');
+    display: inline-block;
+    background: #444;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+    border-radius: 0.35em;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f98780;
+    }
+
+    &.style1 {
+        background: _palette(highlight) url('/images/overlay.png');
+        color: #fff;
+
+        &:hover {
+            background-color: #f98780;
+        }
+
+        &:active {
+            background-color: #d96760;
+        }
+    }
+
+    &.style2 {
+        background: none;
+        color: #606167;
+        box-shadow: inset 0px 0px 2px 0px #a0a1a7;
+
+        &:hover {
+            box-shadow: inset 0px 0px 2px 0px #606167;
+        }
+
+        &:active {
+            box-shadow: inset 0px 0px 2px 0px #202127;
+        }
+    }
+
+    &.style3 {
+        background: #2f333b url('/images/overlay.png');
+        color: #fff;
+
+        &:hover {
+            background-color: #3f434b;
+        }
+
+        &:active {
+            background-color: #1f232b;
+        }
+    }
+}
+
+@include breakpoint(mobile) {
+    input,
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    button,
+    .button {
+        display: block;
+        width: 100%;
+        font-size: 1em;
+        padding: 1em 0 1em 0;
+        max-width: 30em;
+        margin: 0 auto;
+    }
+}
+
+@include breakpoint(desktop) {
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"],
+    button,
+    .button {
+        padding: 0 2.25em 0 2.25em;
+        font-size: 0.9em;
+        min-width: 12em;
+        height: 4em;
+        line-height: 4em;
+
+        &.big {
+            font-size: 1em;
+            min-width: 14em;
+        }
+    }
+}

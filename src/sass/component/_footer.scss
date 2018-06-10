@@ -1,0 +1,22 @@
+
+@include breakpoint(mobile) {
+    #footer {
+        hr {
+            display: none;
+        }
+    }
+}
+
+@include breakpoint(desktop) {
+    #footer {
+        header {
+            &.style1 {
+                padding-bottom: 0;
+            }
+        }
+
+        hr {
+            margin: 6em 0 6em 0;
+        }
+    }
+}

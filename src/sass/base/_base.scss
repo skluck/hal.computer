@@ -1,0 +1,139 @@
+
+@-ms-viewport {
+    width: device-width;
+}
+
+body, input, textarea, select {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    color: #919499;
+}
+
+body {
+    &.is-loading * {
+        @include vendor('transition', 'none !important');
+        @include vendor('animation', 'none !important');
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Russo One', sans-serif;
+    font-weight: 400;
+    color: #484d55;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+a {
+    @include vendor('transition', 'color .25s ease-in-out');
+    text-decoration: underline;
+    color: #717479;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+strong, b {
+    font-weight: 700;
+    color: #484d55;
+}
+
+blockquote {
+    border-left: solid 0.5em #ddd;
+    padding: 1em 0 1em 2em;
+    font-style: italic;
+}
+
+em, i {
+    font-style: italic;
+}
+
+hr {
+    border: 0;
+    border-top: solid 1px #ddd;
+}
+
+sub {
+    position: relative;
+    top: 0.5em;
+    font-size: 0.8em;
+}
+
+sup {
+    position: relative;
+    top: -0.5em;
+    font-size: 0.8em;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+br.clear {
+    clear: both;
+}
+
+p, ul, ol, dl, table, blockquote, form {
+    margin-bottom: 2em;
+}
+
+@include breakpoint(mobile) {
+    html, body {
+        overflow-x: hidden;
+    }
+
+    body, input, select, textarea {
+        line-height: 1.5em;
+        font-size: 10.5pt;
+        letter-spacing: 0;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-size: 1.2em;
+        letter-spacing: 0.05em;
+        margin: 0 0 1em 0;
+    }
+
+    hr {
+        margin: 1em 0 1em 0;
+    }
+}
+
+@include breakpoint(tablet) {
+    body {
+        min-width: 1000px;
+        font-size: 12pt;
+        line-height: 1.5em;
+        letter-spacing: 0.015em;
+    }
+
+    input, select, textarea {
+        font-size: 12pt;
+        line-height: 1.5em;
+        letter-spacing: 0.015em;
+    }
+
+    body {
+        min-width: 960px;
+    }
+}
+
+@include breakpoint(desktop) {
+    body, input, select, textarea {
+        font-size: 13pt;
+        line-height: 1.75em;
+        letter-spacing: 0.025em;
+    }
+
+    body {
+        min-width: 1200px;
+    }
+
+    hr {
+        margin: 2em 0 2em 0;
+    }
+}

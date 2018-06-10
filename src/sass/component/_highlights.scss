@@ -1,0 +1,21 @@
+#highlights {
+    .highlight {
+        text-align: center;
+
+        h3 {
+            color: _palette(highlight);
+        }
+    }
+}
+
+@include breakpoint(desktop) {
+    #highlights {
+        .highlight {
+            h3 {
+                margin: 0 0 0.75em 0;
+                font-size: 1.15em;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+}
