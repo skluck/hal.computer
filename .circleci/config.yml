@@ -94,11 +94,13 @@ jobs:
                 name: 'Deploy'
                 command: |
                     git clone ${CIRCLE_REPOSITORY_URL} publish
-                    rsync -va --delete --exclude=.git \
-                      public/ \
-                      publish/
-
                     cd publish
+                    git checkout master
+
+                    rsync -va --delete --exclude=.git \
+                      ../public/ \
+                      ./
+
                     git status
                     git add .
 
