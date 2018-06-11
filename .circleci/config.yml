@@ -69,11 +69,12 @@ jobs:
                 name: "Run Hugo"
                 command: HUGO_ENV=production hugo -v
             - run:
-                name: 'debug'
+                name: 'Clean up built website'
                 command: |
                     touch public/.nojekyll
                     echo 'hal.computer' > public/CNAME
-                    ls -halR public
+                    rm -rf public/js/main.js
+                    mkdir public/.circleci && cp .circleci/config.simple.yml public/.circleci/config.yml
             - *persist_workspace
 
     deploy_site:
@@ -109,9 +110,3 @@ jobs:
                     git commit -m "Building page for ${CIRCLE_SHA1}"
 
                     git push origin master
-
-
-
-
-
-
