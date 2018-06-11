@@ -1,10 +1,14 @@
 {{ partial "header.html" . }}
 
+{{ if isset .Params "show_highlights" }}
+    {{ partial "home/highlights.html" . }}
+{{ end }}
 
 <div class="wrapper style2">
     {{ with .Title }}
         <div class="title">{{ . }}</div>
     {{ end }}
+
     {{ with .Content }}
         <div id="main" class="container">{{ . }}</div>
     {{ end }}

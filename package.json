@@ -2,7 +2,9 @@
   "name": "hal-homepage",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "watch": "webpack -w",
+    "serve": "hugo server"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

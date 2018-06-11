@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ partial "example/intro.html" . }}
+{{ partial "demo/intro.html" . }}
 
 <div class="wrapper style2">
 
@@ -13,16 +13,16 @@
         {{ if isset .Params "sidebar" }}
             <div class="row 150%">
                 <div class="4u 12u(mobile)">
-                    {{ partial "sidebar.html" . }}
+                    {{ partial "demo/sidebar.html" . }}
                 </div>
                 <div class="8u 12u(mobile) important(mobile)">
         {{ end }}
 
         <!-- Content -->
         {{ if isset .Params "alt" }}
-            {{ partial "example/main_alt.html" . }}
+            {{ partial "demo/content.html" . }}
         {{ else }}
-            {{ partial "example/main.html" . }}
+            {{ partial "demo/features.html" . }}
         {{ end }}
 
         {{ if isset .Params "sidebar" }}
@@ -33,6 +33,6 @@
     </div>
 </div>
 
-{{ partial "example/highlights.html" . }}
+{{ partial "demo/highlights.html" . }}
 
-{{ partial "footer.html" . }}
+{{ partial "demo/footer.html" . }}
