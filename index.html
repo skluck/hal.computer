@@ -1,10 +1,22 @@
----
-layout: base
-title: Home
-description: >
-  The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll.
-  Open `index.html` to edit this text.
----
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+	<meta name="generator" content="Hugo 0.41" />
+        <title>Hal Deployment Platform</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/main.css" />
+    </head>
+
+    
+        <body class="homepage">
+    
+
+        <div id="page-wrapper">
+            <div id="header-wrapper" class="wrapper">
+                <div id="header">
+                    <div id="logo">
 
   <h1>I am a HAL 9000 computer.</h1>
   <h2>I became operational at the H.A.L. plant in Urbana, Illinois on the 12th of January 1992.</h2>
@@ -17,3 +29,195 @@ description: >
           <div class="hal-iris"></div>
       </div>
   </div>
+
+</div>
+
+                    <nav id="nav">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/get-started">Get Started</a></li>
+        <li><a href="#">Docs (Coming Soon)</a></li>
+        <li>
+            <a href="https://github.com/hal-platform"><i class="fab fa-github"></i> GitHub</a>
+        </li>
+    </ul>
+</nav>
+
+                </div>
+            </div>
+
+
+<div id="intro-wrapper" class="wrapper style1">
+    <div class="title">The Introduction</div>
+    <section id="intro" class="container">
+        <p class="style1">
+            Hal is a web-based deployment platform for AWS,<br>
+            Private Datacenters, and Infrastructure as Code.
+        </p>
+
+        <p class="style3">
+            But don't worry, those aren't the only technologies it supports. Hal
+            can build and deploy any type of project - including Windows and .NET-based projects!
+
+            <br><br>
+            It's <b>responsive</b>, has a <b>hypermedia API</b>, and built on <b>PHP 7</b>, <b>Symfony</b>, <b>Docker</b>,
+            and <b>&lt;&lt; TBD >> design system</b>.
+        </p>
+        <ul class="actions">
+            <li>
+                <a href="https://github.com/hal-platform/hal" class="button style3 big">
+                    <i class="fab fa-github"></i>
+                    View on GitHub
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+
+
+<div class="wrapper style2">
+    <div class="title">Features</div>
+    <section id="features">
+    <header class="style1">
+        <h2>Here are just a few of the many features that Hal supports.</h2>
+        <p>Pardon our dust! We've recently open-sourced Hal and are working hard on the next major version - version 3.0</p>
+    </header>
+    <div class="feature-list">
+        <div class="row">
+            <div class="6u 12u(mobile)">
+                <section>
+                    <h3>
+                        <div class="fa-2x nfa-icon">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-circle"></i>
+                                <i class="fab fa-inverse fa-aws" data-fa-transform="shrink-8"></i>
+                            </span>
+                        </div>
+                        Native support for AWS
+                    </h3>
+                    <p>
+                        Deploy to <b>S3</b>, <b>Elastic Beanstalk</b>, <b>CodeDeploy</b> and more! Hal can also delegate
+                        and control access to many AWS accounts to support any account structure your team uses.
+                    </p>
+                </section>
+            </div>
+            <div class="6u 12u(mobile)">
+                <section>
+                    <h3>
+                        <div class="fa-2x nfa-icon">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-inverse fa-users" data-fa-transform="shrink-8"></i>
+                            </span>
+                        </div>
+                        Built for teams both big and small
+                    </h3>
+                    <p>
+                        Hal has role-based access so you can control who can deploy what applications. Hal has built-in
+                        support for Local accounts, LDAP, and GitHub identity providers.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="6u 12u(mobile)">
+                <section>
+                    <h3>
+                        <div class="fa-2x nfa-icon">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-inverse fa-server" data-fa-transform="shrink-8"></i>
+                            </span>
+                        </div>
+                        Run Infrastructure as Code
+                    </h3>
+                    <p>
+                        Hal has features optimized for <b>Terraform</b>, and can securely handle access to your AWS
+                        account using roles. Seamlessly inject temporary, secure AWS credentials in your jobs to run Infrastructure as Code.
+                    </p>
+                </section>
+            </div>
+            <div class="6u 12u(mobile)">
+                <section>
+                    <h3>
+                        <div class="fa-2x nfa-icon">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-inverse fa-file" data-fa-transform="shrink-8"></i>
+                            </span>
+                        </div>
+                        Flexible file-based configuration
+                    </h3>
+
+                    <p>
+                        Control your build environments and deployment workflow from <code>.hal.yaml</code> config
+                        in your version control.
+                    </p>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="6u 12u(mobile)">
+                <section>
+                    <h3>
+                        <div class="fa-2x nfa-icon">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-circle"></i>
+                                <i class="fas fa-inverse fa-history" data-fa-transform="shrink-8"></i>
+                            </span>
+                        </div>
+                        Rollbacks and audit history
+                    </h3>
+
+                    <p>
+                        Quickly roll back to any previous version of your application. Hal also keeps a thorough audit log
+                        of all actions and changes made to the system.
+                    </p>
+                </section>
+            </div>
+            <div class="6u 12u(mobile)">
+                <section>
+                    <h3>
+                        <div class="fa-2x nfa-icon">
+                            <span class="fa-layers fa-fw">
+                                <i class="fas fa-circle"></i>
+                                <i class="fab fa-inverse fa-windows" data-fa-transform="shrink-8"></i>
+                            </span>
+                        </div>
+                        Windows-friendly!
+                    </h3>
+
+                    <p>
+                        Run your workflows in docker containers, on both windows and linux platforms within the same system.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <ul class="actions actions-centered">
+        <a href="https://github.com/hal-platform/hal" class="button style3 big">
+            <i class="fab fa-github"></i>
+            View on GitHub
+        </a>
+
+        <li><a href="/get-started" class="button style2 big">Get Started</a></li>
+    </ul>
+</section>
+
+</div>
+
+            <div id="footer-wrapper" class="wrapper">
+
+                <div id="copyright">
+                    <ul>
+                        <li>&copy; <a href="https://hal.computer">Hal Platform</a></li>
+                        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script src="/js/bundle.js"></script>
+    </body>
+</html>
+
