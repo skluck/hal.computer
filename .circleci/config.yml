@@ -1,0 +1,68 @@
+version: 2
+
+attach_workspace: &attach_workspace
+    attach_workspace:
+        at: '.'
+
+persist_workspace: &persist_workspace
+    persist_to_workspace:
+        root: '.'
+        paths: [ '.' ]
+
+workflows:
+
+    version: 2
+
+    pipeline:
+        jobs:
+            - fetch_code
+            - install_node_dependencies:
+                requires: [ fetch_code ]
+            - build_assets:
+                requires: [ install_node_dependencies ]
+            - build_hugo:
+                requires: [ build_assets ]
+
+jobs:
+    fetch_code:
+        working_directory: '~/project'
+        docker: [{image: 'circleci/buildpack-deps:jessie'}]
+        steps:
+            - checkout
+            - *persist_workspace
+
+    install_node_dependencies:
+        working_directory: '~/project'
+        docker: [{image: 'circleci/node:10.4'}]
+        steps:
+            - *attach_workspace
+
+            - restore_cache:
+                keys: [ 'v1-yarn-deps-{{ checksum "yarn.lock" }}', 'v1-yarn-deps' ]
+
+            - run: 'yarn install'
+
+            - save_cache:
+                key: 'v1-yarn-deps-{{ checksum "yarn.lock" }}'
+                paths: [ 'node_modules' ]
+
+            - *persist_workspace
+
+    build_assets:
+        working_directory: '~/project'
+        docker: [{image: 'circleci/node:10.4'}]
+        steps:
+            - *attach_workspace
+            - run: 'yarn build'
+
+    build_hugo:
+        working_directory: '~/project'
+        docker: [{image: 'felicianotech/docker-hugo:0.41'}]
+        steps:
+            - *attach_workspace
+            - run:
+                name: "Run Hugo"
+                command: HUGO_ENV=production hugo -v
+            - run:
+                name: 'debug'
+                command: 'ls -halR public'
