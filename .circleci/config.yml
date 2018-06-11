@@ -106,7 +106,7 @@ jobs:
                     git config --global user.name "Hal"
                     git commit -m "Building page for ${CIRCLE_SHA1}"
 
-                    #git push origin master
+                    git push origin master
 
 
 
