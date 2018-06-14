@@ -18,7 +18,11 @@
         padding: 1em 2em 1em 2em !important;
         margin: 0 auto;
 
-        .style2 {
+        > .style1 {
+            font-size: 1.25em;
+        }
+
+        > .style2 {
             font-size: 1.5em;
             letter-spacing: 0.05em;
             line-height: 1.25em;
@@ -29,6 +33,8 @@
 
 @include breakpoint(tablet) {
     #intro {
+        text-align: center;
+
         > .style1 {
             font-size: 1.25em;
         }

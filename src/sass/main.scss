@@ -9,8 +9,8 @@
 // html5up.net | @ajlkn
 // Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 @include skel-breakpoints((
-    desktop: '(min-width: 737px)',
-    tablet: '(min-width: 737px) and (max-width: 1200px)',
+    desktop: '(min-width: 1200px)',
+    tablet: '(min-width: 737px) ',
     mobile: '(max-width: 736px)'
 ));
 
@@ -22,15 +22,15 @@
     containers: true,
     breakpoints: (
         desktop: (
-            containers: 1200px,
+            containers: 100%,
             grid: ( gutters: (50px, 50px) )
         ),
         tablet: (
-            containers: 1000px,
+            containers: 100%,
             grid: ( gutters: (35px, 35px) )
         ),
         mobile: (
-            containers: (100%, true),
+            containers: 100%,
             grid: ( gutters: (10px, 10px) )
         )
     )

@@ -1,21 +1,47 @@
 #highlights {
-    .highlight {
+    .highlight-list {
         text-align: center;
+        max-width: 80%;
+        margin: auto;
 
         h3 {
             color: _palette(highlight);
+        }
+
+
+    }
+}
+
+@include breakpoint(mobile) {
+    .button {
+        max-width: 60%;
+    }
+}
+
+@include breakpoint(tablet) {
+    .highlight-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 1em;
+
+        section {
+            width: 48%;
+            padding-top: 2em;
         }
     }
 }
 
 @include breakpoint(desktop) {
-    #highlights {
-        .highlight {
-            h3 {
-                margin: 0 0 0.75em 0;
-                font-size: 1.15em;
-                letter-spacing: 0.05em;
-            }
+    .highlight-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 1em;
+
+        section {
+            width: 30%;
+            padding-top: 2em;
         }
     }
 }

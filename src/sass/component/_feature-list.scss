@@ -1,108 +1,61 @@
 .feature-list {
+    section {
+        margin-bottom: 1em;
+    }
+
     h3 {
         color: _palette(highlight) !important;
+        position: relative;
+        padding-left: 3em;
 
-        &:before {
-            position: relative;
-            display: inline-block;
-            color: #fff;
-            background: #2f333b url('/images/overlay.png');
-            border-radius: 1em;
-            text-align: center;
+        .fa-2x {
+            position: absolute;
+            left: 0;
+            top: -.15em;
         }
+    }
+
+    p {
+        margin: 0 0 0 3.75em;
     }
 }
 
-@include breakpoint(mobile) {
+@include breakpoint(tablet) {
     .feature-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 1em;
+
         section {
-            border-top: solid 1px #eee;
-        }
-
-        > div > div:first-child > div:first-child > section {
-            border-top: 0;
-            padding-top: 0;
-        }
-
-        h3 {
-            position: relative;
-            padding: 4px 0 0 48px;
-            line-height: 1.25em;
-
-            &:before {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 32px;
-                height: 32px;
-                line-height: 32px;
-                font-size: 16px;
-            }
-        }
-
-        p {
-            margin: 0 0 0 48px;
-        }
-    }
-}
-
-@include breakpoint(desktop) {
-    #features {
-        padding: 0 6em 0 6em;
-        header {
-            &.style1 {
-                padding-bottom: 5em;
-            }
-        }
-
-        .actions {
-            margin-top: 5em;
-        }
-    }
-
-    .feature-list {
-        section {
+            width: 48%;
             padding-top: 2em;
-            border-top: solid 1px #eee;
-        }
-
-        .row:first-child section {
-            padding-top: 0;
-            border-top: 0;
         }
 
         h3 {
             margin: 0 0 0.75em 0;
             font-size: 1.15em;
             letter-spacing: 0.05em;
-            margin-top: -0.35em;
+        }
+    }
+}
 
-            &:before {
-                width: 64px;
-                height: 64px;
-                line-height: 64px;
-                margin-right: 0.75em;
-                font-size: 32px;
-                top: 0.2em;
-            }
+@include breakpoint(desktop) {
+    .feature-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 5em;
+
+        section {
+            width: 48%;
+            padding-top: 2em;
         }
 
-        p {
-            margin: 0 0 0 5em;
-        }
-
-        &.small {
-            h3:before {
-                font-size: 24px;
-                line-height: 45px;
-                width: 45px;
-                height: 45px;
-                margin-right: 1em;
-            }
-
-            p {
-                margin: 0 0 0 4em;
-            }
+        h3 {
+            margin: 0 0 0.75em 0;
+            font-size: 1.15em;
+            letter-spacing: 0.05em;
         }
     }
 }

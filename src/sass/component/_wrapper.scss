@@ -176,7 +176,7 @@
 
         .title {
             font-size: 0.9em;
-            width: 18em;
+            width: 22em;
             height: 2.5em;
             top: -2.5em;
             line-height: 2.5em;
@@ -211,6 +211,17 @@
 @include breakpoint(tablet) {
     .wrapper {
         padding: 4em 0 7em 0;
+
+        .title {
+            font-size: 0.9em;
+            width: 25em;
+            height: 3.25em;
+            top: -3.25em;
+            line-height: 3.25em;
+            margin-bottom: -3.25em;
+            margin-left: -12.5em;
+            padding-top: 0.5em;
+        }
     }
 
     #intro-wrapper {
@@ -227,17 +238,6 @@
 @include breakpoint(desktop) {
     .wrapper {
         padding: 6em 0 9em 0;
-
-        .title {
-            font-size: 0.9em;
-            width: 25em;
-            height: 3.25em;
-            top: -3.25em;
-            line-height: 3.25em;
-            margin-bottom: -3.25em;
-            margin-left: -12.5em;
-            padding-top: 0.5em;
-        }
     }
 
     #header-wrapper {
