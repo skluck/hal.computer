@@ -1,7 +1,13 @@
 {{ partial "header.html" . }}
 
 {{ if isset .Params "show_highlights" }}
-    {{ partial "home/highlights.html" . }}
+    <div class="wrapper style3">
+        <div class="title">Highlights</div>
+
+        <div id="highlights" class="container">
+            {{ partial "home/highlights.html" . }}
+        </div>
+    </div>
 {{ end }}
 
 <div class="wrapper style2">

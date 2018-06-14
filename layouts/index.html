@@ -1,9 +1,14 @@
 {{ partial "header.html" . }}
 
-{{ partial "home/intro.html" . }}
+<div id="intro-wrapper" class="wrapper style1">
+    <div class="title">What is my purpose?</div>
+    <section id="intro" class="container">
+        {{ partial "home/intro.html" . }}
+    </section>
+</div>
 
 <div class="wrapper style2">
-    <div class="title">Features</div>
+    <div class="title">What can I do?</div>
     {{ partial "home/features.html" . }}
 </div>
 
