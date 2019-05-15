@@ -62,7 +62,7 @@ jobs:
 
     build_hugo:
         working_directory: '~/project'
-        docker: [{image: 'felicianotech/docker-hugo:0.41'}]
+        docker: [{image: 'cibuilds/hugo:0.41'}]
         steps:
             - *attach_workspace
             - run:
