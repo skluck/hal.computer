@@ -1,4 +1,4 @@
-## Hal Platform web site
+## Hal Portal web site
 
 This is a Hugo site which uses the [Escape Velocity](https://html5up.net/escape-velocity) theme from html5up.
 
